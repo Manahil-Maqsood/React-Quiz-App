@@ -21,7 +21,7 @@ import Question from './Question';
 
 const Quiz = () => {
     const [quizState, dispatch] = useContext(QuizContext);
-    console.log('quizState', quizState);
+    // console.log('quizState', quizState);
 
     // const [state, dispatch] = useReducer(reducer, initialState);
     // console.log("state", state);
@@ -37,7 +37,7 @@ const Quiz = () => {
                     <div className="congratulations">Congratulations</div>
                     <div className="results-info">
                         <div>You have completed the quiz.</div>
-                        <div>You've got 4 of {quizState.questions.length}</div>
+                        <div>You've got {quizState.correctAnswersCount} of {quizState.questions.length}</div>
                     </div>
                     <div className="next-button" onClick={() => dispatch({type: 'RESTART'})} >Restart</div>
                 </div>
