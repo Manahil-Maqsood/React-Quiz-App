@@ -6,10 +6,10 @@ import { QuizProvider } from './contexts/quiz';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <QuizProvider>
       <Quiz />
     </QuizProvider>
-  </React.StrictMode>
+  // </React.StrictMode> //do this for useEffect hook to run only once
 );
 
